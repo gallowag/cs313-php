@@ -11,7 +11,7 @@ body, html {
 	background-size: cover
 }
 
-.page {
+.container {
    background: rgba(255, 153, 153, 0.75);
    color: white;
 }
