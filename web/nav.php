@@ -15,7 +15,7 @@ $file = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
 		</li>
 
 		<li class="nav-item <?php if ($file === 'about') echo 'active' ?>">
-			<a href="about.php">About Us</a>
+			<a href="about.php">About Me</a>
 		</li>
 
 		<li class="nav-item <?php if ($file === 'assignments') echo 'active' ?>">
