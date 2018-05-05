@@ -6,8 +6,11 @@
 <body class="mountain-bg">
 
 <div class="container">
+	<?php
+	require("nav.php");
+	?>
 
-<h2>Welcome</h2>
+	<h2>Welcome</h2>
 
 </div>
 

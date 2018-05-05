@@ -5,7 +5,9 @@
 <body>
 <div class="container">
 
-
+	<?php
+	require("nav.php");
+	?>
 	<div class="jumbotron">
 	<h2>About Us</h2>
 
