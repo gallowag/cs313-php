@@ -4,7 +4,7 @@ $file = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
 
 ?>
 
-<h1>Make your own Mountain, Inc.</h1>
+<h1>Greer Galloway</h1>
 
 <nav class="navbar navbar-inverse">
 	<ul class="nav navbar-nav">
@@ -15,7 +15,7 @@ $file = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
 		</li>
 
 		<li class="nav-item <?php if ($file === 'home') echo 'active' ?>">
-			<a href="home.php">Home</a>
+			<a href="index.php">Home</a>
 		</li>
 
 		<li class="nav-item <?php if ($file === 'assignments') echo 'active' ?>">
