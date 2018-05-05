@@ -18,8 +18,9 @@
 	<?php
 	require("nav.php");
 	?>
-
+	<div class="page">
 	<h2>Welcome</h2>
+	</div>
 
 </div>
 
