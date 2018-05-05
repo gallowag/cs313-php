@@ -19,7 +19,7 @@ $file = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
 		</li>
 
 		<li class="nav-item <?php if ($file === 'assignments') echo 'active' ?>">
-			<a href="assignments.php">Login</a>
+			<a href="assignments.php">Assignments</a>
 		</li>
 	<ul>
 </nav>
