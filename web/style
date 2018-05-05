@@ -1,0 +1,14 @@
+
+.wallpaper {
+	background-image: url("geo1.jpg");
+	height:100%;
+
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover
+}
+
+.page {
+   background: rgba(22, 22, 22, 0.75);
+   color: #ddd;
+}
