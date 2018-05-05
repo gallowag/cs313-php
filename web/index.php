@@ -10,12 +10,10 @@
 
 <div class="container">
 
-<?php
-require("nav.php");
-?>
+<h2>Welcome</h2>
 
 	<div class="jumbotron">
-		<h2>Welcome. You are not logged in.</h2>
+		<h2>Welcome</h2>
 	</div>
 
 </div>
