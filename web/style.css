@@ -12,6 +12,6 @@ body, html {
 }
 
 .page {
-   background: rgba(22, 22, 22, 0.75);
-   color: #ddd;
+   background: rgba(255, 153, 153, 0.75);
+   color: white;
 }
