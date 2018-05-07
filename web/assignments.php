@@ -17,7 +17,7 @@
 	require("nav.php");
 	?>
 
-	<div class="page">
+	<div class="jumbotron">
 	<h2>Coming soon!</h2>
 
 	</div>
