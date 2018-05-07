@@ -18,7 +18,3 @@ body, html {
    flex-wrap: wrap;
 }
 
-.nav-item {
-	display: flex;
-  	flex-wrap: wrap;
-}
