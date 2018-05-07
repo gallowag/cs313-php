@@ -28,10 +28,9 @@
 	<h2>Swing</h2>
 
 	<p>Wednesday nights</p>
-	<p>Instruction: 8-9pm</p>
-	<p>Open dance: 9-11pm</p>
+	<p>Instruction: 8-9pm<br/>Open dance: 9-11pm</p>
 	<p>Hinkley Gym</p>
-	
+
 	</div>
 	</div>
 
