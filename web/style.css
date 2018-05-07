@@ -17,3 +17,8 @@ body, html {
    display: flex;
    flex-wrap: wrap;
 }
+
+.nav {
+	display: flex;
+  	flex-wrap: wrap;
+}
