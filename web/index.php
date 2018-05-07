@@ -19,7 +19,20 @@
 	require("nav.php");
 	?>
 	<div class="jumbotron">
-	<h2>Welcome</h2>
+
+	<div class="col-md-4">
+	<img src="swing.jpg" class="img-thumbnail" alt="Swing kids">
+	</div>
+
+	<div class="col-md-8">
+	<h2>Swing</h2>
+
+	<p>Wednesday nights</p>
+	<p>Instruction: 8-9pm</p>
+	<p>Open dance: 9-11pm</p>
+	<p>Hinkley Gym</p>
+	
+	</div>
 	</div>
 
 </div>
