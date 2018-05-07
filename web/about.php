@@ -11,7 +11,7 @@
 
 	<title>About Me</title>
 </head>
-<body class="wallpaper">
+<body class="brick-bg">
 <div class="container">
 
 	<?php

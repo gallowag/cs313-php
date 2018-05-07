@@ -11,7 +11,7 @@
 
 	<title>Assignments</title>
 </head>
-<body class="wallpaper">
+<body class="brick-bg">
 <div class="container">
 	<?php
 	require("nav.php");
