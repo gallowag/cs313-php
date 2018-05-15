@@ -9,12 +9,12 @@
 </head>
 <body>
 	<div class="container">
-	<h2>Shopping Cart</h2>
+	<h3>Shopping Cart</h3>
 	<?php
 	session_start();
 
 	foreach ($_SESSION as $lego => $quantity) {
-		echo "<h3>" . $quantity . "x " . $lego . "(s). </h3>";
+		echo "" . $quantity . "x " . $lego . "(s).";
 		echo "<form method=\"post\" action=\"remove.php\">";
 		echo "<input type=\"hidden\" name=\"item\" value=\"" . $lego . "\">";
 		echo "<button type=\"submit\">Remove from Cart</button></form>";
@@ -22,7 +22,7 @@
 	?>
 
 	<br/>
-	<button><a href="browse.php">Continue Shopping</a></button>
+	<button><a href="browse.html">Continue Shopping</a></button>
 	<button><a href="checkout.php">Check Out</a></button>
 	</div>
 
