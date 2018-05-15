@@ -5,27 +5,69 @@
 
 		   <!-- Bootstrap CSS -->
     	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    	
+
 	</head>
 
 	<body>
 		<div class="container">
-		<form method="POST" action="results.php">	
+		<h1>Star Wars Lego</h1>
 
-			<h1>Star Wars Lego</h1>
-			<label for="lego-ds">Death Star</label><input type="checkbox" name="legos[]" id="lego-ds" value="499.99"><br />
-			<label for="lego-mfal">Millennium Falcon</label><input type="checkbox" name="legos[]" id="lego-mfal" value="799.99"><br />
-			<label for="lego-tf">Imperial TIE Fighter</label><input type="checkbox" name="legos[]" id="lego-tf" value="69.99"><br />
-			<label for="lego-yw">Y-Wing Starfighter</label><input type="checkbox" name="legos[]" id="lego-yw" value="59.99"><br />
-			<label for="lego-sd">First OrderStar Destroyer</label><input type="checkbox" name="legos[]" id="lego-sd" value="159.99"><br />
-			<label for="lego-si">Slave I</label><input type="checkbox" name="legos[]" id="lego-si" value="199.99"><br />
-			<label for="lego-w">First Order Heavy Assault Walker</label><input type="checkbox" name="legos[]" id="lego-w" value="149.99"><br />
-			<label for="lego-ss">Snowspeeder</label><input type="checkbox" name="legos[]" id="lego-ss" value="199.99"><br />
-			<br />
+		<form method="POST" action="add.php">	
+			<img src="deathstar.jpg" class="img-thumbnail" alt="Lego Death Star">
+			Death Star
+			<input type="hidden" name="lego" value="Death Star"><br>
+			<button type="submit">Add</button>
+ 		</form>
 
-			<input type="submit" value="Submit Answers">
+ 		<form method="POST" action="add.php">	
+			<img src="millenniumfalcon.jpg" class="img-thumbnail" alt="Lego Millennium Falcon">
+			Millennium Falcon
+			<input type="hidden" name="lego" value="Millennium Falcon"><br>
+			<button type="submit">Add</button>
+ 		</form>
 
-		</form>
+ 		<form method="POST" action="add.php">	
+			<img src="tiefighter.jpg" class="img-thumbnail" alt="Lego Imperial TIE Fighter">
+			Imperial TIE Fighter
+			<input type="hidden" name="lego" value="Imperial TIE Fighter"><br>
+			<button type="submit">Add</button>
+ 		</form>
+
+ 		<form method="POST" action="add.php">	
+			<img src="ywing.jpg" class="img-thumbnail" alt="Lego Y-Wing Starfighter">
+			Y-Wing Starfighter
+			<input type="hidden" name="lego" value="Y-Wing Starfighter"><br>
+			<button type="submit">Add</button>
+ 		</form>
+
+ 		<form method="POST" action="add.php">	
+			<img src="stardestroyer.jpg" class="img-thumbnail" alt="Lego First Order Star Destroyer">
+			First Order Star Destroyer
+			<input type="hidden" name="lego" value="First Order Star Destroyer"><br>
+			<button type="submit">Add</button>
+ 		</form>
+
+ 		<form method="POST" action="add.php">	
+			<img src="slave.jpg" class="img-thumbnail" alt="Lego Slave I">
+			Slave I
+			<input type="hidden" name="lego" value="Slave I"><br>
+			<button type="submit">Add</button>
+ 		</form>
+
+ 		<form method="POST" action="add.php">	
+			<img src="walker.jpg" class="img-thumbnail" alt="Lego First Order Heavy Assault Walker">
+			First Order Heavy Assault Walker
+			<input type="hidden" name="lego" value="First Order Heavy Assault Walker"><br>
+			<button type="submit">Add</button>
+ 		</form>
+
+ 		<form method="POST" action="add.php">	
+			<img src="snowspeeder.jpg" class="img-thumbnail" alt="Lego Snowspeeder">
+			Snowspeeder
+			<input type="hidden" name="lego" value="Snowspeeder"><br>
+			<button type="submit">Add</button>
+ 		</form>
+
 		</div>
 
 	</body>
