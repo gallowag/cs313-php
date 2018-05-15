@@ -16,7 +16,7 @@
 	foreach ($_SESSION as $lego => $quantity) {
 		echo "" . $quantity . "x " . $lego . "(s).";
 		echo "<form method=\"post\" action=\"remove.php\">";
-		echo "<input type=\"hidden\" name=\"item\" value=\"" . $lego . "\">";
+		echo "<input type=\"hidden\" name=\"lego\" value=\"$lego\">";
 		echo "<button type=\"submit\">Remove from Cart</button></form>";
 	}
 	?>
