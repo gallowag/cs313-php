@@ -11,5 +11,6 @@ if(isset($_SESSION[$fruit]))
 else
 	$_SESSION[$fruit] = 1;
 
-//header("Location: {$_SERVER['HTTP_REFERER']}");
+
+header("Location: {$_SERVER['HTTP_REFERER']}");
 ?>
