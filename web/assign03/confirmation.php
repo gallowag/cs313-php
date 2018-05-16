@@ -20,11 +20,11 @@
 
 		echo "<h5>Shipping:</h5><br/>";
 		foreach ($_SESSION as $lego => $quantity) {
-			echo "" . $quantity . "x " . $lego . "(s).";
+			echo "" . $quantity . "x " . $lego . "(s)<br/>";
 		}
 
 		echo "<h5>To:</h5><br/>";
-		echo "$address<br/>$city, $state $zip";
+		echo "$address <br/> $city , $state $zip";
 		
 	?>
 
