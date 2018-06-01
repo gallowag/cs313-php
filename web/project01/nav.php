@@ -4,7 +4,7 @@ $file = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
 
 ?>
 
-<h1>Greer Galloway</h1>
+<h1>Drama View</h1>
 
 <nav class="navbar navbar-dark">
 	<div class="container-fluid">
@@ -15,7 +15,7 @@ $file = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
 		</li>
 
 		<li class="nav-item<?php if ($file === 'dramas') echo 'active' ?>">
-			<a href="dramas.php">About</a>
+			<a href="dramas.php">Dramas</a>
 		</li>
 
 		<li class="nav-item<?php if ($file === 'about') echo 'active' ?>">

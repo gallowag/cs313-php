@@ -20,7 +20,7 @@
 
 	<div class="col-md-4">
 	<?php
-	$blue = "blue.jpg";
+	$blue = "blue1.jpg";
 	echo "<img src='$blue' class='img-thumbnail' alt='Swing kids'>";
 	?>
 	</div>
