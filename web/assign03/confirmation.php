@@ -24,7 +24,7 @@
 		}
 
 		echo "<h5>To:</h5><br/>";
-		echo "" . $_POST["address"] . "<br/>" . $city . ", " . $state . " " . $zip ."";
+		echo "" . $address . "<br/>" . $city . ", " . $state . " " . $zip ."";
 		
 	?>
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Cart</title>
+	<title>Shopping Cart</title>
 	
 	  <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
@@ -23,7 +23,7 @@
 
 	<br/>
 	<button><a href="browse.html">Continue Shopping</a></button>
-	<button><a href="checkout.php">Check Out</a></button>
+	<button><a href="checkout.php">Go to check out</a></button>
 	</div>
 
 </body>

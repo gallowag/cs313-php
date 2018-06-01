@@ -12,10 +12,10 @@
 	<h3>Check Out</h3>
 	<form type="POST" action="confirmation.php">
 		<h5>Please enter your shipping information:</h5>
-		Address: <input type="text"><br/>
-		City: <input type="text"><br/>
-		State: <input type="text"><br/>
-		Zip: <input type="text"><br/>
+		Address: <input type="text" name="address"><br/>
+		City: <input type="text" name="city"><br/>
+		State: <input type="text" name="state"><br/>
+		Zip: <input type="text" name="zip"><br/>
 		<br/>
 		<button type="submit">Check Out</button>
 	</form>
