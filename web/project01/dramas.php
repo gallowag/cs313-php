@@ -28,7 +28,7 @@ $dramas = $statement->fetchAll(PDO::FETCH_ASSOC);
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 
     <link rel="stylesheet" href="style.css">
-    
+
 	<title>Korean Dramas</title>
 </head>
 <body class="blue-bg">
@@ -45,9 +45,9 @@ $dramas = $statement->fetchAll(PDO::FETCH_ASSOC);
 	<?php
 	foreach ($dramas as $drama) {
 
-		$id = $course["id"];
-		$title = $course["title"];
-		$img = $course["img"];
+		$id = $drama["id"];
+		$title = $drama["title"];
+		$img = $drama["img"];
 
 		echo "<li><img src='$img' class='img-thumbnail'><a href='dramaDetails.php?drama_id=$id'>$title</a></li>";
 	}
