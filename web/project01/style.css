@@ -3,7 +3,11 @@ body, html {
 }
 
 ul {
-	list-style:none;
+	list-style: none;
+}
+
+h1 {
+	color: white;
 }
 
 .blue-bg {
