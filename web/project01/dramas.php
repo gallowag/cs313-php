@@ -56,8 +56,8 @@ $dramas = $statement->fetchAll(PDO::FETCH_ASSOC);
 	?>
 
 	</ul>
-	
-	</div>
 
+	</div>
+</div>
 </body>
 </html>
