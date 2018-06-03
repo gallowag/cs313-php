@@ -18,10 +18,10 @@
 	require("nav.php");
 	?>
 
-	<div class="col-md-4">
+	<div class="jumbotron">
 	<?php
 	$blue = "blue1.jpg";
-	echo "<img src='$blue' class='img-thumbnail' alt='Swing kids'>";
+	echo "<img src='$blue' class='img-thumbnail'>";
 	?>
 	</div>
 
