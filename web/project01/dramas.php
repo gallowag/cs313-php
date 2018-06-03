@@ -38,6 +38,8 @@ $dramas = $statement->fetchAll(PDO::FETCH_ASSOC);
 	require("nav.php");
 	?>
 
+	<div clas="jumbotron">
+
 	<h2>Dramas</h2>
 
 	<ul>
@@ -54,6 +56,7 @@ $dramas = $statement->fetchAll(PDO::FETCH_ASSOC);
 	?>
 
 	</ul>
+	
 	</div>
 
 </body>
