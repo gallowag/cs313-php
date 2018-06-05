@@ -20,8 +20,9 @@ $stmt->bindValue(":username",$user,PDO::PARAM_STR);
 $stmt->execute();
 
 $row = $stmt->fetch();
+$dbpass = $row["password"];
 
-if(password_verify($pass, $row["password"])) {
+if(password_verify($pass, $dbpass)) {
 
 	$_SESSION['user'] = $user;
 	
