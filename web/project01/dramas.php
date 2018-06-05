@@ -38,7 +38,7 @@ $dramas = $statement->fetchAll(PDO::FETCH_ASSOC);
 	require("nav.php");
 	?>
 
-	<div clas="jumbotron">
+	<div class="jumbotron">
 
 	<h2>Dramas</h2>
 

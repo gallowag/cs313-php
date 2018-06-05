@@ -41,7 +41,7 @@ $description = $row["description"];
 	<div class="jumbotron">
 
 	<?php
-		echo "<img src='$img' class='img-thumbnail'><h2>$title</h2><br><p>$description</p>";
+		echo "<img src='$img' class='img-thumbnail'><h3>$title</h3><br><p>$description</p>";
 	?>
 
 	<form action="insertComment.php" method="POST">

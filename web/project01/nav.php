@@ -4,7 +4,7 @@ $file = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
 
 ?>
 
-<br><br>
+<br>
 <h1>Drama View</h1>
 
 <nav class="navbar-navbar">
