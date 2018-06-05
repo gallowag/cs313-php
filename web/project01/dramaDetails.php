@@ -49,16 +49,17 @@ $end = $row["date_finished"];
 
 	<div class="jumbotron">
 	<form action="insertComment.php" method="POST">
-	<h4>Add a Review</h4>
+	<h5>Add a Review</h5>
 	<input type="hidden" name="drama_id" value="<?php echo $dramaId; ?>">
-	<input name="subject" placeholder="Subject"><br>
-	<input name="rating" placeholder="Rating (1-10)"><br>
+	<input name="subject" placeholder="Subject"><br><br>
+	<input name="rating" placeholder="Rating (1-10)"><br><br>
 	<textarea name="body" placeholder="Content"></textarea>
 
 	<br><br>
 	<input type="submit" value="Add Review">
 	</form>
 
+	<br><br>
 	<h3>Reviews</h3>
 	</div>
 
