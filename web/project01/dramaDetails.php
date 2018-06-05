@@ -43,7 +43,7 @@ $end = $row["date_finished"];
 	<div class="jumbotron">
 
 	<?php
-		echo "<img src='$img' class='img-thumbnail'><h3>$title</h3><br><p>$description</p><br><p>Aired: $start - $end</p>";
+		echo "<img src='$img' class='img-thumbnail'><h3>$title</h3><br><p>$description</p><br><p>Aired from $start to $end</p>";
 	?>
 	</div>
 
@@ -52,15 +52,13 @@ $end = $row["date_finished"];
 	<h4>Add a Review</h4>
 	<input type="hidden" name="drama_id" value="<?php echo $dramaId; ?>">
 	<input name="subject" placeholder="Subject"><br>
-	<input name="rating" placeholder="1-10">
+	<input name="rating" placeholder="Rating (1-10)"><br>
 	<textarea name="body" placeholder="Content"></textarea>
 
 	<br><br>
 	<input type="submit" value="Add Review">
 	</form>
-	</div>
 
-	<div class="jumbotron">
 	<h3>Reviews</h3>
 	</div>
 
