@@ -31,20 +31,29 @@ $description = $row["description"];
 
 	<title>Drama Details</title>
 </head>
-<body>
+<body class="blue-bg">
+<div class="container">
 
-<?php
-	echo "<img src='$img' class='img-thumbnail'><h2>$title</h2>";
-?>
+	<?php
+	require("nav.php");
+	?>
 
-<form action="insertComment.php" method="POST">
-<input type="hidden" name="drama_id" value="<?php echo $dramaId; ?>">
-<input type="date" name="date"><br>
-<textarea name="content" placeholder="Content"></textarea>
+	<div class="jumbotron">
 
-<br><br>
-<input type="submit" value="Add Review">
-</form>
+	<?php
+		echo "<img src='$img' class='img-thumbnail'><h2>$title</h2><br><p>$description</p>";
+	?>
 
+	<form action="insertComment.php" method="POST">
+	<input type="hidden" name="drama_id" value="<?php echo $dramaId; ?>">
+	<input type="date" name="date"><br>
+	<textarea name="content" placeholder="Content"></textarea>
+
+	<br><br>
+	<input type="submit" value="Add Review">
+	</form>
+	</div>
+
+</div>
 </body>
 </html>
