@@ -1,21 +1,35 @@
 <?php
 require("dbConnect.php");
-$dramaId = htmlspecialchars($_GET["course_id"]);
+
+$dramaId = htmlspecialchars($_GET["drama_id"]);
 $db = get_db();
-$query = "SELECT name, number FROM drama WHERE id=:id";
+
+$query = "SELECT title, img, description FROM drama WHERE id=:id";
 $statement = $db->prepare($query);
-$statement->bindValue(":id", $courseId, PDO::PARAM_INT);
+$statement->bindValue(":id", $dramaId, PDO::PARAM_INT);
 $statement->execute();
+
 $row = $statement->fetch();
+
 $title = $row["title"];
 $img = $row["img"];
 $description = $row["description"];
+
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+	<title>Drama Details</title>
 </head>
 <body>
 
@@ -23,13 +37,13 @@ $description = $row["description"];
 	echo "<img src='$img' class='img-thumbnail'><h2>$title</h2>";
 ?>
 
-<form action="insertNote.php" method="POST">
-<input type="hidden" name="course_id" value="<?php echo $courseId; ?>">
+<form action="insertComment.php" method="POST">
+<input type="hidden" name="drama_id" value="<?php echo $dramaId; ?>">
 <input type="date" name="date"><br>
 <textarea name="content" placeholder="Content"></textarea>
 
 <br><br>
-<input type="submit" value="Add Note">
+<input type="submit" value="Add Review">
 </form>
 
 </body>
