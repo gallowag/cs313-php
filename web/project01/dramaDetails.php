@@ -4,7 +4,7 @@ require("dbConnect.php");
 $dramaId = htmlspecialchars($_GET["drama_id"]);
 $db = get_db();
 
-$query = "SELECT title, img, description FROM drama WHERE id=:id";
+$query = "SELECT title, img, description, date_started, date_finished FROM drama WHERE id=:id";
 $statement = $db->prepare($query);
 $statement->bindValue(":id", $dramaId, PDO::PARAM_INT);
 $statement->execute();
@@ -14,6 +14,8 @@ $row = $statement->fetch();
 $title = $row["title"];
 $img = $row["img"];
 $description = $row["description"];
+$start = $row["date_started"];
+$end = $row["date_finished"];
 
 ?>
 
@@ -41,17 +43,25 @@ $description = $row["description"];
 	<div class="jumbotron">
 
 	<?php
-		echo "<img src='$img' class='img-thumbnail'><h3>$title</h3><br><p>$description</p>";
+		echo "<img src='$img' class='img-thumbnail'><h3>$title</h3><br><p>$description</p><br><p>Aired: $start - $end</p>";
 	?>
+	</div>
 
+	<div class="jumbotron">
 	<form action="insertComment.php" method="POST">
+	<h4>Add a Review</h4>
 	<input type="hidden" name="drama_id" value="<?php echo $dramaId; ?>">
-	<input type="date" name="date"><br>
-	<textarea name="content" placeholder="Content"></textarea>
+	<input name="subject" placeholder="Subject"><br>
+	<input name="rating" placeholder="1-10">
+	<textarea name="body" placeholder="Content"></textarea>
 
 	<br><br>
 	<input type="submit" value="Add Review">
 	</form>
+	</div>
+
+	<div class="jumbotron">
+	<h3>Reviews</h3>
 	</div>
 
 </div>
