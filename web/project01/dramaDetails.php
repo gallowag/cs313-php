@@ -70,9 +70,9 @@ $reviews = $statement2->fetchAll(PDO::FETCH_ASSOC);
 
 	<br><br>
 	<h3>Reviews</h3>
-	<br><hr>
+	<br>
 
-	<ul>
+	<ul><hr>
 	<?php
 	foreach ($reviews as $review) {
 
