@@ -70,7 +70,7 @@ $reviews = $statement2->fetchAll(PDO::FETCH_ASSOC);
 
 	<br><br>
 	<h3>Reviews</h3>
-	<br>
+	<br><hr>
 
 	<ul>
 	<?php
@@ -80,7 +80,7 @@ $reviews = $statement2->fetchAll(PDO::FETCH_ASSOC);
 		$rating = $review["rating"];
 		$body = $review["body"];
 
-		echo "<li><h6>$date</h6><h3>$rating</h3><h5>$body</h5></li><hr><br>";
+		echo "<li><h6>$date</h6><h3>$rating</h3><h5>$body</h5></li><br><hr>";
 
 	}
 	?>
