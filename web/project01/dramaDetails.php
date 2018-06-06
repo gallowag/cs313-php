@@ -19,7 +19,7 @@ $start = $row1["date_started"];
 $end = $row1["date_finished"];
 
 //get review info
-$query2 = "SELECT user_id, age(date) AS time_stamp, rating, body FROM review WHERE drama_id=:id ORDER BY time_stamp DESC";
+$query2 = "SELECT user_id, age(date) AS time_stamp, rating, body FROM review WHERE drama_id=:id ORDER BY time_stamp";
 $statement2 = $db->prepare($query2);
 $statement2->bindValue(":id", $dramaId, PDO::PARAM_INT);
 
@@ -89,11 +89,16 @@ $reviews = $statement2->fetchAll(PDO::FETCH_ASSOC);
 
 
 		$time_stamp = $review["time_stamp"];
-		echo gettype($time_stamp);
+		if ($time_stamp == "00:00:00") {
+			echo "<li><h6>$username | today</h6>";
+		} else {
+			echo "<li><h6>$username | $time_stamp ago</h6>";
+		}
+
 		$rating = $review["rating"];
 		$body = $review["body"];
 
-		echo "<li><h6>$username | $time_stamp ago</h6><h3>$rating</h3><h5>$body</h5></li><br><hr>";
+		echo "<h3>$rating</h3><h5>$body</h5></li><br><hr>";
 
 	}
 	?>
