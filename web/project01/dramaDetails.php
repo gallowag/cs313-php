@@ -21,6 +21,7 @@ $end = $row1["date_finished"];
 //get review info
 $query2 = "SELECT date, rating, body FROM review WHERE drama_id=:id";
 $statement2 = $db->prepare($query2);
+$statement2->bindValue(":id", $dramaId, PDO::PARAM_INT);
 
 $statement2->execute();
 $reviews = $statement2->fetchAll(PDO::FETCH_ASSOC);
