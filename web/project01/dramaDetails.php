@@ -78,7 +78,7 @@ $reviews = $statement2->fetchAll(PDO::FETCH_ASSOC);
 
 		$user_id = $review["user_id"];
 
-		$query3 = "SELECT tusername FROM \"user\" WHERE id=:user_id";
+		$query3 = "SELECT username FROM \"user\" WHERE id=:user_id";
 		$statement3 = $db->prepare($query3);
 		$statement3->bindValue(":user_id", $user_id, PDO::PARAM_INT);
 		$statement3->execute();
