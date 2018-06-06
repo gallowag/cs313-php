@@ -16,7 +16,7 @@ $name = $row1["name"];
 $img = $row1["img"];
 $birthday = $row1["birthday"];
 $description = $row1["description"];
-?>
+
 
 //get dramas info
 $query2 = "SELECT drama_id FROM actors_in_dramas WHERE actor_id=:id";
@@ -25,6 +25,7 @@ $statement2->bindValue(":id", $actor_id, PDO::PARAM_INT);
 
 $statement2->execute();
 $dramas = $statement2->fetchAll(PDO::FETCH_ASSOC);
+?>
 
 <!DOCTYPE html>
 <html>
