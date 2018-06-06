@@ -5,8 +5,8 @@ $dramaId = htmlspecialchars($_GET["drama_id"]);
 $db = get_db();
 
 //get drama info
-$query = "SELECT title, img, description, date_started, date_finished FROM drama WHERE id=:id";
-$statement1 = $db->prepare($query);
+$query1 = "SELECT title, img, description, date_started, date_finished FROM drama WHERE id=:id";
+$statement1 = $db->prepare($query1);
 $statement1->bindValue(":id", $dramaId, PDO::PARAM_INT);
 $statement1->execute();
 
@@ -19,7 +19,7 @@ $start = $row1["date_started"];
 $end = $row1["date_finished"];
 
 //get review info
-$query2 = "SELECT date, rating, body FROM review WHERE drama_id=:id";
+$query2 = "SELECT user_id, date, rating, body FROM review WHERE drama_id=:id";
 $statement2 = $db->prepare($query2);
 $statement2->bindValue(":id", $dramaId, PDO::PARAM_INT);
 
@@ -76,11 +76,23 @@ $reviews = $statement2->fetchAll(PDO::FETCH_ASSOC);
 	<?php
 	foreach ($reviews as $review) {
 
+		$user_id = $review["user_id"];
+
+		$query3 = "SELECT tusername FROM \"user\" WHERE id=:user_id";
+		$statement3 = $db->prepare($query3);
+		$statement3->bindValue(":user_id", $user_id, PDO::PARAM_INT);
+		$statement3->execute();
+
+		$row3 = $statement3->fetch();
+
+		$username = $row3["username"];
+
+
 		$date = $review["date"];
 		$rating = $review["rating"];
 		$body = $review["body"];
 
-		echo "<li><h6>$date</h6><h3>$rating</h3><h5>$body</h5></li><br><hr>";
+		echo "<li><h6>$username | $date</h6><h3>$rating</h3><h5>$body</h5></li><br><hr>";
 
 	}
 	?>
