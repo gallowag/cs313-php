@@ -4,18 +4,26 @@ require("dbConnect.php");
 $dramaId = htmlspecialchars($_GET["drama_id"]);
 $db = get_db();
 
+//get drama info
 $query = "SELECT title, img, description, date_started, date_finished FROM drama WHERE id=:id";
-$statement = $db->prepare($query);
-$statement->bindValue(":id", $dramaId, PDO::PARAM_INT);
-$statement->execute();
+$statement1 = $db->prepare($query);
+$statement1->bindValue(":id", $dramaId, PDO::PARAM_INT);
+$statement1->execute();
 
-$row = $statement->fetch();
+$row1 = $statement1->fetch();
 
-$title = $row["title"];
-$img = $row["img"];
-$description = $row["description"];
-$start = $row["date_started"];
-$end = $row["date_finished"];
+$title = $row1["title"];
+$img = $row1["img"];
+$description = $row1["description"];
+$start = $row1["date_started"];
+$end = $row1["date_finished"];
+
+//get review info
+$query2 = "SELECT date, rating, body FROM review WHERE drama_id=:id";
+$statement2 = $db->prepare($query2);
+
+$statement2->execute();
+$reviews = $statement2->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
@@ -61,6 +69,19 @@ $end = $row["date_finished"];
 
 	<br><br>
 	<h3>Reviews</h3>
+
+	<?php
+	foreach ($reviews as $review) {
+
+		$date = $review["date"];
+		$rating = $review["rating"];
+		$body = $drama["body"];
+
+		echo "<li><h6>$date</h6><h2>rating</h2><p>body</p></li><br>";
+
+	}
+	?>
+
 	</div>
 
 </div>
