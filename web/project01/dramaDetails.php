@@ -78,7 +78,7 @@ $reviews = $statement2->fetchAll(PDO::FETCH_ASSOC);
 			$name = $row5["name"];
 			$actor_img = $row5["img"];
 
-			echo "<li><img src='$img' class='img-thumbnail'><h4>$name</h4></li>";
+			echo "<li><img src='$actor_img' class='img-thumbnail'><h4>$name</h4></li>";
 		}
 		echo "</ul>";
 
