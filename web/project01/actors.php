@@ -51,7 +51,7 @@ $actors = $statement->fetchAll(PDO::FETCH_ASSOC);
 		$name = $actor["name"];
 		$img = $actor["img"];
 
-		echo "<li><img src='$img' class='img-thumbnail'><a href='actorDetails.php?actor_id=$id'><p>$title</p></a></li><br>";
+		echo "<li><img src='$img' class='img-thumbnail'><a href='actorDetails.php?actor_id=$id'><p>$name</p></a></li><br>";
 	}
 	?>
 
