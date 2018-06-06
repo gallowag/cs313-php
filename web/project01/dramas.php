@@ -51,7 +51,7 @@ $dramas = $statement->fetchAll(PDO::FETCH_ASSOC);
 		$title = $drama["title"];
 		$img = $drama["img"];
 
-		echo "<li><img src='$img' class='img-thumbnail'><a href='dramaDetails.php?drama_id=$id'><h4>$title</h4></a></li><br>";
+		echo "<li><img src='$img' class='img-thumbnail'><a href='dramaDetails.php?drama_id=$id'><p>$title</p></a></li><br>";
 
 	}
 	?>
