@@ -18,6 +18,14 @@ $description = $row1["description"];
 $start = $row1["date_started"];
 $end = $row1["date_finished"];
 
+//get actors info
+$query4 = "SELECT actor_id FROM actors_in_dramas WHERE drama_id=:id";
+$statement4 = $db->prepare($query4);
+$statement4->bindValue(":id", $dramaId, PDO::PARAM_INT);
+
+$statement4->execute();
+$actors = $statement4->fetchAll(PDO::FETCH_ASSOC);
+
 //get review info
 $query2 = "SELECT user_id, age(date) AS time_stamp, rating, body FROM review WHERE drama_id=:id ORDER BY time_stamp";
 $statement2 = $db->prepare($query2);
@@ -52,7 +60,28 @@ $reviews = $statement2->fetchAll(PDO::FETCH_ASSOC);
 	<div class="jumbotron">
 
 	<?php
+
 		echo "<img src='$img' class='img-thumbnail'><h2>$title</h2><br><p>$description</p><br><h4>Aired from $start to $end</h4>";
+
+		echo "<ul>";
+		foreach ($actors as $actor) {
+
+			$actor_id = $actor["actor_id"];
+
+			$query5 = "SELECT name, img FROM actor WHERE id=:actor_id";
+			$statement5 = $db->prepare($query5);
+			$statement5->bindValue(":actor_id", $actor_id, PDO::PARAM_INT);
+			$statement5->execute();
+
+			$row5 = $statement5->fetch();
+
+			$name = $row5["name"];
+			$actor_img = $row5["img"];
+
+			echo "<li><img src='$img' class='img-thumbnail'><h4>$name</h4></li>";
+		}
+		echo "</ul>";
+
 	?>
 	</div>
 
