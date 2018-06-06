@@ -52,7 +52,7 @@ $reviews = $statement2->fetchAll(PDO::FETCH_ASSOC);
 	<div class="jumbotron">
 
 	<?php
-		echo "<img src='$img' class='img-thumbnail'><h2>$title</h2><br><p>$description</p><br><p>Aired from $start to $end</p>";
+		echo "<img src='$img' class='img-thumbnail'><h2>$title</h2><br><h4>$description</h4><br><h4>Aired from $start to $end</h4>";
 	?>
 	</div>
 
@@ -79,7 +79,7 @@ $reviews = $statement2->fetchAll(PDO::FETCH_ASSOC);
 		$rating = $review["rating"];
 		$body = $review["body"];
 
-		echo "<li><h6>$date</h6><h2>$rating</h2><p>$body</p></li><br>";
+		echo "<li><h6>$date</h6><h3>$rating</h3><h5>$body</h5></li><br>";
 
 	}
 	?>
