@@ -78,7 +78,7 @@ $reviews = $statement2->fetchAll(PDO::FETCH_ASSOC);
 		$rating = $review["rating"];
 		$body = $drama["body"];
 
-		echo "<li><h6>$date</h6><h2>rating</h2><p>body</p></li><br>";
+		echo "<li><h6>$date</h6><h2>$rating</h2><p>$body</p></li><br>";
 
 	}
 	?>
