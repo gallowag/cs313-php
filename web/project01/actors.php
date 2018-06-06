@@ -8,7 +8,7 @@ if (!isset($db)) {
 	die("DB Connection was not set");
 }
 
-$query = "SELECT id, name, img FROM actor";
+$query = "SELECT id, name, img FROM actor ORDER BY name";
 $statement = $db->prepare($query);
 
 // Bind any variables I need, here...
