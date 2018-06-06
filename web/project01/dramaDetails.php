@@ -26,6 +26,16 @@ $statement4->bindValue(":id", $dramaId, PDO::PARAM_INT);
 $statement4->execute();
 $actors = $statement4->fetchAll(PDO::FETCH_ASSOC);
 
+//get drama rating
+$query6 = "SELECT avg(rating) FROM review WHERE id=:id";
+$statement6 = $db->prepare($query6);
+$statement6->bindValue(":id", $dramaId, PDO::PARAM_INT);
+$statement6->execute();
+
+$row6 = $statement6->fetch();
+
+$drama_rating = $row6["drama_rating"];
+
 //get review info
 $query2 = "SELECT user_id, age(date) AS time_stamp, rating, body FROM review WHERE drama_id=:id ORDER BY time_stamp";
 $statement2 = $db->prepare($query2);
@@ -61,7 +71,9 @@ $reviews = $statement2->fetchAll(PDO::FETCH_ASSOC);
 
 	<?php
 
-		echo "<img src='$img' class='img-thumbnail'><h2>$title</h2><br><p>$description</p><br><h4>Aired from $start to $end</h4>";
+		echo "<img src='$img' class='img-thumbnail'><h2>$drama_rating | $title</h2><br><p>$description</p><br><h4>Aired from $start to $end</h4>";
+
+		echo "<h3>Cast</h3>";
 
 		echo "<ul>";
 		foreach ($actors as $actor) {

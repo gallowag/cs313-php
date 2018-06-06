@@ -5,7 +5,7 @@ $actor_id = htmlspecialchars($_GET["actor_id"]);
 $db = get_db();
 
 //get actor info
-$query1 = "SELECT name, img, birthday, description FROM actor WHERE id=:id";
+$query1 = "SELECT name, img, birthday, age(birthday) AS age, description FROM actor WHERE id=:id";
 $statement1 = $db->prepare($query1);
 $statement1->bindValue(":id", $actor_id, PDO::PARAM_INT);
 $statement1->execute();
@@ -15,6 +15,7 @@ $row1 = $statement1->fetch();
 $name = $row1["name"];
 $img = $row1["img"];
 $birthday = $row1["birthday"];
+$age = $row1["age"];
 $description = $row1["description"];
 
 
@@ -51,7 +52,9 @@ $dramas = $statement2->fetchAll(PDO::FETCH_ASSOC);
 	<div class="jumbotron">
 
 	<?php
-		echo "<img src='$img' class='img-thumbnail'><h2>$name</h2><br><p>$description</p><br><h4>Birthday: $birthday</h4>";
+		echo "<img src='$img' class='img-thumbnail'><h2>$name</h2><h4>$birthday ($age)</h4><br><p>$description</p><br>";
+
+		echo "<h3>Works</h3>";
 
 		echo "<ul>";
 		foreach ($dramas as $drama) {
