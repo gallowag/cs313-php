@@ -19,7 +19,7 @@ $start = $row1["date_started"];
 $end = $row1["date_finished"];
 
 //get actors info
-$query4 = "SELECT a.id, a.name, a.img FROM actors_in_dramas AS aid, actor AS a WHERE aid.actor_id = a.id AND aid.actor_id=:id";
+$query4 = "SELECT a.id, a.name, a.img FROM actors_in_dramas AS aid, actor AS a WHERE aid.actor_id = a.id AND aid.drama_id=:id";
 $statement4 = $db->prepare($query4);
 $statement4->bindValue(":id", $dramaId, PDO::PARAM_INT);
 
