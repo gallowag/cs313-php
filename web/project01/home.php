@@ -19,10 +19,12 @@
 	?>
 
 	<div class="jumbotron">
-	<?php
-	$blue = "blue1.jpg";
-	echo "<img src='$blue' class='img-thumbnail'>";
-	?>
+	<h2>Welcome to DramaView!</h2>
+	<h4>Sign In</h4>
+	<form action="signIn.php" method="post">
+		<p>Username: </p><input type="text" name="username"><br>
+		<p>Password: </p><input type="text" name="password"><br>
+		<button type=submit>Sign In</button>
 	</div>
 
 </div>
