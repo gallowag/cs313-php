@@ -20,7 +20,7 @@ $description = $row1["description"];
 
 
 //get dramas info
-$query2 = "SELECT drama_id FROM actors_in_dramas AS aid INNER JOIN drama AS d ON(aid.drama_id = d.id) WHERE actor_id=:id ORDER BY age(d.date_finished) DESC";
+$query2 = "SELECT aid.drama_id FROM actors_in_dramas AS aid, drama AS d WHERE aid.drama_id = d.id AND aid.actor_id=:id ORDER BY age(d.date_finished)";
 $statement2 = $db->prepare($query2);
 $statement2->bindValue(":id", $actor_id, PDO::PARAM_INT);
 
