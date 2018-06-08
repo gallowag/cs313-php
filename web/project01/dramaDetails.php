@@ -5,7 +5,7 @@ $dramaId = htmlspecialchars($_GET["drama_id"]);
 $db = get_db();
 
 //get drama info
-$query1 = "SELECT title, img, description, to_date(date_started, 'DD Mon YYYY'), date_finished FROM drama WHERE id=:id";
+$query1 = "SELECT title, img, description, date_started, date_finished FROM drama WHERE id=:id";
 $statement1 = $db->prepare($query1);
 $statement1->bindValue(":id", $dramaId, PDO::PARAM_INT);
 $statement1->execute();
