@@ -51,7 +51,16 @@ $dramas = $statement->fetchAll(PDO::FETCH_ASSOC);
 		$title = $drama["title"];
 		$img = $drama["img"];
 
-		echo "<li><img src='$img' class='img-thumbnail'><a href='dramaDetails.php?drama_id=$id'><p>$title</p></a></li><br>";
+		$query6 = "SELECT round(AVG(rating),1) AS drama_rating FROM review WHERE drama_id=:id";
+		$statement6 = $db->prepare($query6);
+		$statement6->bindValue(":id", $id, PDO::PARAM_INT);
+		$statement6->execute();
+
+		$row6 = $statement6->fetch();
+
+		$drama_rating = $row6["drama_rating"];
+
+		echo "<li><img src='$img' class='img-thumbnail'><a href='dramaDetails.php?drama_id=$id'><p>$title | $drama_rating</p></a></li><br>";
 
 	}
 	?>
