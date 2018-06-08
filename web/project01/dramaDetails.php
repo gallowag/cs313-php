@@ -71,7 +71,7 @@ $reviews = $statement2->fetchAll(PDO::FETCH_ASSOC);
 
 	<?php
 
-		echo "<img src='$img' class='img-thumbnail'><h2>$title | $drama_rating stars</h2><br><p>$description</p><br><h4>Aired from $start to $end</h4>";
+		echo "<img src='$img' class='img-thumbnail'><h2>$title | $drama_rating</h2><br><p>$description</p><br><h4>Aired from $start to $end</h4>";
 
 		echo "<h3>Cast</h3>";
 
@@ -90,10 +90,9 @@ $reviews = $statement2->fetchAll(PDO::FETCH_ASSOC);
 	</div>
 
 	<div class="jumbotron">
-	<form action="insertComment.php" method="POST">
+	<form action="insertReview.php" method="POST">
 	<h5>Add a Review</h5>
 	<input type="hidden" name="drama_id" value="<?php echo $dramaId; ?>">
-	<input name="subject" placeholder="Subject"><br>
 	<input name="rating" placeholder="Rating (1-10)"><br>
 	<textarea name="body" placeholder="Content"></textarea>
 
