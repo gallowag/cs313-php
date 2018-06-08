@@ -27,7 +27,7 @@ $statement4->execute();
 $actors = $statement4->fetchAll(PDO::FETCH_ASSOC);
 
 //get drama rating
-$query6 = "SELECT AVG(rating) AS drama_rating FROM review WHERE drama_id=:id";
+$query6 = "SELECT round(AVG(rating),1) AS drama_rating FROM review WHERE drama_id=:id";
 $statement6 = $db->prepare($query6);
 $statement6->bindValue(":id", $dramaId, PDO::PARAM_INT);
 $statement6->execute();
