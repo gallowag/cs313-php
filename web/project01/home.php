@@ -22,8 +22,8 @@
 	<h2>Welcome to DramaView!</h2>
 	<h4>Sign In</h4><br>
 	<form action="signIn.php" method="post">
-		<h4>Username: <input type="text" name="username"></h4><
-		<h4>Password: <input type="text" name="password"></h4><br>
+		<p>Username: <input type="text" name="username">
+		Password: <input type="text" name="password"></p><br>
 		<button type=submit class="btn btn-light">Sign In</button>
 	</div>
 
