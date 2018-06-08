@@ -5,7 +5,7 @@ $actor_id = htmlspecialchars($_GET["actor_id"]);
 $db = get_db();
 
 //get actor info
-$query1 = "SELECT name, img, birthday, age(birthday) AS age, description FROM actor WHERE id=:id";
+$query1 = "SELECT name, img, birthday, EXTRACT(year FROM age(birthday)) AS age, description FROM actor WHERE id=:id";
 $statement1 = $db->prepare($query1);
 $statement1->bindValue(":id", $actor_id, PDO::PARAM_INT);
 $statement1->execute();
