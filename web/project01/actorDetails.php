@@ -20,7 +20,7 @@ $description = $row1["description"];
 
 
 //get dramas info
-$query2 = "SELECT aid.drama_id FROM actors_in_dramas AS aid, drama AS d WHERE aid.drama_id = d.id AND aid.actor_id=:id ORDER BY age(d.date_finished)";
+$query2 = "SELECT d.title, d.img FROM actors_in_dramas AS aid, drama AS d WHERE aid.drama_id = d.id AND aid.actor_id=:id ORDER BY age(d.date_finished)";
 $statement2 = $db->prepare($query2);
 $statement2->bindValue(":id", $actor_id, PDO::PARAM_INT);
 
@@ -59,17 +59,17 @@ $dramas = $statement2->fetchAll(PDO::FETCH_ASSOC);
 		echo "<ul>";
 		foreach ($dramas as $drama) {
 
-			$drama_id = $drama["drama_id"];
+			/*$drama_id = $drama["drama_id"];
 
 			$query3 = "SELECT title, img FROM drama WHERE id=:id";
 			$statement3 = $db->prepare($query3);
 			$statement3->bindValue(":id", $drama_id, PDO::PARAM_INT);
 			$statement3->execute();
 
-			$row3 = $statement3->fetch();
+			$row3 = $statement3->fetch();*/
 
-			$title = $row3["title"];
-			$drama_img = $row3["img"];
+			$title = $drama["title"];
+			$drama_img = $drama["img"];
 
 			echo "<li><img src='$drama_img' class='img-thumbnail'><a href='dramaDetails.php?drama_id=$drama_id'><p>$title</p></a></li>";
 		}
