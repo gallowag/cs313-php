@@ -19,7 +19,7 @@ $start = $row1["date_started"];
 $end = $row1["date_finished"];
 
 //get actors info
-$query4 = "SELECT actor_id FROM actors_in_dramas WHERE drama_id=:id";
+$query4 = "SELECT a.id, a.name, a.img FROM actors_in_dramas AS aid, actor AS a WHERE aid.actor_id = a.id AND aid.actor_id=:id";
 $statement4 = $db->prepare($query4);
 $statement4->bindValue(":id", $dramaId, PDO::PARAM_INT);
 
@@ -71,24 +71,16 @@ $reviews = $statement2->fetchAll(PDO::FETCH_ASSOC);
 
 	<?php
 
-		echo "<img src='$img' class='img-thumbnail'><h2>$drama_rating | $title</h2><br><p>$description</p><br><h4>Aired from $start to $end</h4>";
+		echo "<img src='$img' class='img-thumbnail'><h2>$title | $drama_rating stars</h2><br><p>$description</p><br><h4>Aired from $start to $end</h4>";
 
 		echo "<h3>Cast</h3>";
 
 		echo "<ul>";
 		foreach ($actors as $actor) {
 
-			$actor_id = $actor["actor_id"];
-
-			$query5 = "SELECT name, img FROM actor WHERE id=:actor_id";
-			$statement5 = $db->prepare($query5);
-			$statement5->bindValue(":actor_id", $actor_id, PDO::PARAM_INT);
-			$statement5->execute();
-
-			$row5 = $statement5->fetch();
-
-			$name = $row5["name"];
-			$actor_img = $row5["img"];
+			$actor_id = $actor["id"];
+			$name = $actor["name"];
+			$actor_img = $actor["img"];
 
 			echo "<li><img src='$actor_img' class='img-thumbnail'><a href='actorDetails.php?actor_id=$actor_id'><p>$name</p></a></li>";
 		}
