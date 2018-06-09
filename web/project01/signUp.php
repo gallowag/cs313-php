@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="style.css">
 
-	<title>Home</title>
+	<title>Create Account</title>
 
 </head>
 <body class="blue-bg">
@@ -19,14 +19,13 @@
 	?>
 
 	<div class="jumbotron">
-	<h2>Welcome to DramaView!</h2>
-	<h4>Sign In</h4><br>
-	<form action="signIn.php" method="post">
+	<h2>Create an Account!</h2>
+	<form action="createAccount.php" method="post">
 		<h4>Username: <input type="text" name="username"><br><br>
 		Password: <input type="text" name="password"></h4><br>
 		<button type=submit class="btn btn-light">Sign In</button>
 	</form>
-	<h5>Don't have an account? <a href="signUp.php">Create one!</a></h5>
+	<h5>Already have an account? <a href="home.php">Sign In!</a></h5>
 	</div>
 
 </div>
