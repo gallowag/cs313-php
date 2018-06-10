@@ -22,6 +22,7 @@
 	<h2>Create an Account!</h2>
 	<form action="createAccount.php" method="post">
 		<h4>Username: <input type="text" name="username"><br><br>
+		Email: <input type="text" name="email"><br><br>
 		Password: <input type="text" name="password"></h4><br>
 		<button type=submit class="btn btn-light">Sign In</button>
 	</form>

@@ -22,7 +22,7 @@
 
 			$row = $statement->fetch();
 			$hashedPasswordFromDB = $row["password"];
-			$id = $row["id"]
+			$id = $row["id"];
 
 			// now check to see if the hashed password matches
 			if (password_verify($password, $hashedPasswordFromDB))
@@ -36,3 +36,4 @@
 		}
 
 	}
+?>
