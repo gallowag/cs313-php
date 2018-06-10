@@ -14,7 +14,7 @@
 		$username = $_POST["username"];
 		$password = $_POST["password"];
 
-		$query = "SELECT id, password FROM user WHERE username=:username";
+		$query = "SELECT id, password FROM \"user\" WHERE username=:username";
 		$statement = $db->prepare($query);
 		$statement->bindValue(':username', $username);
 		$result = $statement->execute();
@@ -31,7 +31,7 @@
 			{
 				echo "third if";
 				// password was correct, put the user on the session, and redirect to home
-				$_SESSION['username'] = $username;
+				$_SESSION['id'] = $id;
 				header("Location: home.php");
 				die(); // we always include a die after redirects.
 			}
