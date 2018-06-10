@@ -29,7 +29,7 @@ $statement->bindValue(':password', $hashedPassword);
 
 $statement->execute();
 
-header("Location: signIn.php");
+header("Location: home.php");
 die(); 
 
 ?>
