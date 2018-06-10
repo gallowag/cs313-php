@@ -24,7 +24,7 @@
 		<h4>Username: <input type="text" name="username"><br><br>
 		Email: <input type="text" name="email"><br><br>
 		Password: <input type="text" name="password"></h4><br>
-		<button type=submit class="btn btn-light">Sign In</button>
+		<button type=submit class="btn btn-light">Create Account</button>
 	</form>
 	<h5>Already have an account? <a href="home.php">Sign In!</a></h5>
 	</div>
