@@ -35,13 +35,13 @@
 
 			} else {
 				$_SESSION["bad_login"] = true;
-				header("Location: home.php");
+				header("Location: home2.php");
 				die(); // we always include a die after redirects.
 			}
 			
 		} else {
 			$_SESSION["bad_login"] = true;
-			header("Location: home2.php");
+			header("Location: home.php");
 			die(); // we always include a die after redirects.
 		}
 
