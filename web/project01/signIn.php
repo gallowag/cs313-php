@@ -3,19 +3,20 @@
 	session_start();
 	$_SESSION["bad_login"] = false;
 
-	echo "in signin";
-	// Connect to the DB
-	require("dbConnect.php");
-	$db = get_db();
 
 	if(isset($_POST["username"]) && isset($_POST["password"])) {
 
 		$username = $_POST["username"];
 		$password = $_POST["password"];
 
+		// Connect to the DB
+		require("dbConnect.php");
+		$db = get_db();
+
 		$query = "SELECT id, password FROM \"user\" WHERE username=:username";
 		$statement = $db->prepare($query);
 		$statement->bindValue(':username', $username);
+
 		$result = $statement->execute();
 
 		if($result) {
@@ -31,6 +32,7 @@
 				$_SESSION['id'] = $id;
 				header("Location: home2.php");
 				die(); // we always include a die after redirects.
+
 			} else {
 				$_SESSION["bad_login"] = true;
 				header("Location: home.php");
@@ -43,9 +45,5 @@
 			die(); // we always include a die after redirects.
 		}
 
-	} else {
-		$_SESSION["bad_login"] = true;
-		header("Location: home.php");
-		die(); // we always include a die after redirects.
 	}
 ?>

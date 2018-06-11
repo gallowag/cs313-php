@@ -21,17 +21,20 @@
 	<div class="jumbotron">
 	<h2>Welcome to DramaView!</h2>
 	<h4>Sign In</h4><br>
+
 	<?php 
 		session_start();
 		if(isset($_SESSION["bad_login"]) && $_SESSION["bad_login"] == true) {
 			echo "<div class=\"alert alert-danger\" role=\"alert\">Wrong username or password</div";
 		}
 	?>
+
 	<form action="signIn.php" method="post">
 		<h4>Username: <input type="text" name="username"><br><br>
 		Password: <input type="text" name="password"></h4><br>
 		<button type=submit class="btn btn-light">Sign In</button>
 	</form>
+	
 	<h5>Don't have an account? <a href="signUp.php">Create one!</a></h5>
 	</div>
 
