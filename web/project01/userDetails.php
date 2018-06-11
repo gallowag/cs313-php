@@ -52,7 +52,9 @@ $reviews = $statement2->fetchAll(PDO::FETCH_ASSOC);
 		echo "<h2>$username<br>$email</h2><br>";
 	?>
 
-	<button class="btn btn-light"><a href="signOut.php">Sign Out</a></button>
+	<form action="signOut.php">
+	<button type="submit" class="btn btn-light">Sign Out</button>
+	</form>
 
 	<br><br>
 	<h3>Reviews</h3>
