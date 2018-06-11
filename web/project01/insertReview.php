@@ -8,10 +8,13 @@ require("dbConnect.php");
 $db = get_db();
 
 session_start();
-$id = 1;
+
 if(isset($_SESSION['id'])) {
 	$id = $_SESSION['id'];
-} 
+} else {
+	header("Location: dramaDetails.php?drama_id=$dramaId");
+	die();
+}
 
 $query = "INSERT INTO review (user_id, drama_id, date, rating, body) VALUES (:id, :dramaId, now(), :rating, :body)";
 $statement = $db->prepare($query);
