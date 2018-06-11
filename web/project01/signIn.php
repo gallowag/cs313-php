@@ -34,8 +34,14 @@
 				$_SESSION['id'] = $id;
 				header("Location: home.php");
 				die(); // we always include a die after redirects.
+			} else {
+				header("Location: home.php");
+				die(); // we always include a die after redirects.
 			}
 			
+		} else {
+			header("Location: home.php");
+			die(); // we always include a die after redirects.
 		}
 
 	}
