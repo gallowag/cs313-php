@@ -2,6 +2,10 @@
 
 $file = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
 
+if (!isset($db)) {
+	require("dbConnect.php");
+	$db = get_db();
+}
 
 
 ?>
@@ -32,9 +36,6 @@ $file = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
 			$id = $_SESSION['id'];
 
 			//get drama info
-			require("dbConnect.php");
-			$db = get_db();
-			
 			$query1 = "SELECT username FROM \"user\" WHERE id=:id";
 			$statement1 = $db->prepare($query1);
 			$statement1->bindValue(":id", $id, PDO::PARAM_INT);
