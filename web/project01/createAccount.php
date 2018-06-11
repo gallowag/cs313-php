@@ -32,6 +32,8 @@ if($result1 || $result2) {
 	$_SESSION['create_error'] = "Username or email already in use!";
 	header("Location: signUp.php");
 	die(); 
+} else {
+	$_SESSION['create_error'] = "";
 }
 
 $username = htmlspecialchars($username);

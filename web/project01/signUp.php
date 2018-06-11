@@ -22,7 +22,7 @@
 	<h2>Create an Account!</h2>
 	<?php 
 	session_start();
-	if(isset($_SESSION['create_error'])) {
+	if(isset($_SESSION['create_error']) && $_SESSION['create_error'] != "") {
 		$error_msg = $_SESSION['create_error'];
 		echo "<h5>$error_msg</h5>";
 	}
