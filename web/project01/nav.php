@@ -30,7 +30,21 @@ $file = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
 		session_start();
 		if(isset($_SESSION['id'])) {
 			$id = $_SESSION['id'];
-			echo "<ul class=\"nav navbar-nav navbar-right\"><li><a href=\"userDetails.php\">Welcome, $id</li></ul>";
+
+			//get drama info
+			require("dbConnect.php");
+			$db = get_db();
+			
+			$query1 = "SELECT username FROM \"user\" WHERE id=:id";
+			$statement1 = $db->prepare($query1);
+			$statement1->bindValue(":id", $id, PDO::PARAM_INT);
+			$statement1->execute();
+
+			$row1 = $statement1->fetch();
+
+			$username = $row1["username"];
+		
+			echo "<ul class=\"nav navbar-nav navbar-right\"><li><a href=\"userDetails.php\">Welcome, $username</a></li></ul>";
 		} else {
 			echo "<ul class=\"nav navbar-nav navbar-right\"><li><a href=\"home.php\">Sign In</a></li></ul>";
 		}	
