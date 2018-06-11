@@ -18,7 +18,14 @@ if (!isset($db)) {
 	<ul class="nav navbar-nav">
 
 		<li class="nav-item<?php if ($file === 'home') echo 'active' ?>">
-			<a href="home.php">Home</a>
+			<?php 
+			session_start();
+			if(isset$_SESSION["id"]) {
+				echo "<a href=\"home2.php\">Home</a>";
+			} else {
+				echo "<a href=\"home.php\">Home</a>";
+			}
+			?>
 		</li>
 
 		<li class="nav-item<?php if ($file === 'dramas') echo 'active' ?>">
