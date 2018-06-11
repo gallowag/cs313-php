@@ -1,7 +1,7 @@
 <?php
 
 	session_start();
-	//$_SESSION["loggedIn"] = false;
+	$_SESSION["bad_login"] = false;
 
 	echo "in signin";
 	// Connect to the DB
