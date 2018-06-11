@@ -28,18 +28,17 @@ $statement2 = $db->prepare($query2);
 $statement2->bindValue(':email', $email);
 $result2 = $statement2->execute();
 
+echo "$result1";
+echo "$result2";
 if($result1 || $result2) {
-	echo "$result1";
-	echo "$result2";
 	$_SESSION['create_error'] = "Username or email already in use!";
-	header("Location: signUp.php");
-	die(); 
+	/*header("Location: signUp.php");
+	die(); */
 } else {
-	echo "good to go";
 	$_SESSION['create_error'] = "";
 }
 
-$username = htmlspecialchars($username);
+/*$username = htmlspecialchars($username);
 
 // Get the hashed password.
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
@@ -54,6 +53,6 @@ $statement3->bindValue(':password', $hashedPassword);
 $statement3->execute();
 
 header("Location: home.php");
-die(); 
+die(); */
 
 ?>
