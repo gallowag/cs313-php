@@ -10,7 +10,6 @@
 
 	if(isset($_POST["username"]) && isset($_POST["password"])) {
 
-		echo "first if";
 		$username = $_POST["username"];
 		$password = $_POST["password"];
 
@@ -21,7 +20,6 @@
 
 		if($result) {
 
-			echo "second if";
 			$row = $statement->fetch();
 			$hashedPasswordFromDB = $row["password"];
 			$id = $row["id"];
@@ -29,20 +27,25 @@
 			// now check to see if the hashed password matches
 			if (password_verify($password, $hashedPasswordFromDB))
 			{
-				echo "third if";
 				// password was correct, put the user on the session, and redirect to home
 				$_SESSION['id'] = $id;
 				header("Location: home2.php");
 				die(); // we always include a die after redirects.
 			} else {
+				$_SESSION["bad_login"] = true;
 				header("Location: home.php");
 				die(); // we always include a die after redirects.
 			}
 			
 		} else {
+			$_SESSION["bad_login"] = true;
 			header("Location: home.php");
 			die(); // we always include a die after redirects.
 		}
 
+	} else {
+		$_SESSION["bad_login"] = true;
+		header("Location: home.php");
+		die(); // we always include a die after redirects.
 	}
 ?>
