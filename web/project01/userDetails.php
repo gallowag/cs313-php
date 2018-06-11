@@ -75,7 +75,7 @@ $reviews = $statement2->fetchAll(PDO::FETCH_ASSOC);
 	}
 	?>
 	</ul>
-	?>
+	
 
 	</div>
 </div>

@@ -32,7 +32,7 @@
 				echo "third if";
 				// password was correct, put the user on the session, and redirect to home
 				$_SESSION['id'] = $id;
-				header("Location: home.php");
+				header("Location: home2.php");
 				die(); // we always include a die after redirects.
 			} else {
 				header("Location: home.php");
