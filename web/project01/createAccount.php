@@ -43,7 +43,7 @@ $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
 
 $query3 = "INSERT INTO \"user\"(username,email,password) VALUES(:username,:email,:password)";
-$statement3 = $db->prepare($query);
+$statement3 = $db->prepare($query3);
 $statement3->bindValue(':username', $username);
 $statement3->bindValue(':email', $email);
 $statement3->bindValue(':password', $hashedPassword);
