@@ -29,7 +29,7 @@ $statement2->bindValue(':email', $email);
 $result2 = $statement2->execute();
 
 if($result1 || $result2) {
-	$_SESSION['error'] = "Username or email already in use!" 
+	$_SESSION['create_error'] = "Username or email already in use!";
 	header("Location: signUp.php");
 	die(); 
 }
