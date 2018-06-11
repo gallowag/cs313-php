@@ -21,10 +21,10 @@
 	<div class="jumbotron">
 	<h2>Create an Account!</h2>
 	<?php 
-		session_start();
-		if(isset($_SESSION['error'])) {
-			echo "<h5>$_SESSION['error']</h5>";
-		}
+	session_start();
+	if(isset($_SESSION['error'])) {
+		echo "<h5>$_SESSION['error']</h5>";
+	}
 	?>
 	<form action="createAccount.php" method="post">
 		<h4>Username: <input type="text" name="username"><br><br>
