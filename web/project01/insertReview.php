@@ -4,10 +4,6 @@ $dramaId = htmlspecialchars($_POST["drama_id"]);
 $rating = htmlspecialchars($_POST["rating"]);
 $body = htmlspecialchars($_POST["body"]);
 
-// echo "Course: $courseId\n";
-// echo "date: $date\n";
-// echo "content: $content\n";
-
 require("dbConnect.php");
 $db = get_db();
 
@@ -17,6 +13,7 @@ if(isset($_SESSION['id'])) {
 } else {
 	$id = 1;
 */
+$id = 1;
 $query = "INSERT INTO review (user_id, drama_id, date, rating, body) VALUES (:id, :dramaId, now(), :rating, :body)";
 $statement = $db->prepare($query);
 $statement->bindValue(":id", $id, PDO::PARAM_INT);
