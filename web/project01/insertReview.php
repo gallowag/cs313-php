@@ -11,13 +11,12 @@ $body = htmlspecialchars($_POST["body"]);
 require("dbConnect.php");
 $db = get_db();
 
-start_session();
+/*start_session();
 if(isset($_SESSION['id'])) {
 	$id = $_SESSION['id'];
 } else {
 	$id = 1;
-}
-
+*/
 $query = "INSERT INTO review (user_id, drama_id, date, rating, body) VALUES (:id, :dramaId, now(), :rating, :body)";
 $statement = $db->prepare($query);
 $statement->bindValue(":id", $id, PDO::PARAM_INT);
