@@ -20,7 +20,7 @@ if (!isset($db)) {
 		<li class="nav-item<?php if ($file === 'home') echo 'active' ?>">
 			<?php 
 			session_start();
-			if(isset$_SESSION["id"]) {
+			if(isset($_SESSION["id"])) {
 				echo "<a href=\"home2.php\">Home</a>";
 			} else {
 				echo "<a href=\"home.php\">Home</a>";
