@@ -22,8 +22,9 @@
 	<h2>Create an Account!</h2>
 	<?php 
 	session_start();
-	if(isset($_SESSION['error'])) {
-		echo "<h5>$_SESSION['error']</h5>";
+	if(isset($_SESSION['create_error'])) {
+		$error_msg = $_SESSION['create_error'];
+		echo "<h5>$error_msg</h5>";
 	}
 	?>
 	<form action="createAccount.php" method="post">
