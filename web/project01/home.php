@@ -26,6 +26,7 @@
 		if(isset($_SESSION["bad_login"] && $_SESSION["bad_login"] == true)) {
 			echo "<div class=\"alert alert-danger\" role=\"alert\">Wrong username or password</div";
 		}
+	?>
 	<form action="signIn.php" method="post">
 		<h4>Username: <input type="text" name="username"><br><br>
 		Password: <input type="text" name="password"></h4><br>
