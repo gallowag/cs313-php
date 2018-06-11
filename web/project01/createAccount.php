@@ -19,12 +19,12 @@ if (!isset($username) || $username == ""
 session_start();
 
 $query1 = "SELECT id FROM \"user\" WHERE username=:username";
-$statement1 = $db->prepare($query);
+$statement1 = $db->prepare($query1);
 $statement1->bindValue(':username', $username);
 $result1 = $statement1->execute();
 
 $query2 = "SELECT id FROM \"user\" WHERE email=:email";
-$statement2 = $db->prepare($query);
+$statement2 = $db->prepare($query2);
 $statement2->bindValue(':email', $email);
 $result2 = $statement2->execute();
 
