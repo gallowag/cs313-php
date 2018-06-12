@@ -19,7 +19,7 @@
 	?>
 
 	<div class="jumbotron">
-	<h2>Welcome to DramaView!</h2>
+	<h2>Welcome to KDrama Review!</h2>
 	
 	</div>
 

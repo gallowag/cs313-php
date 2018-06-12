@@ -11,7 +11,7 @@ if (!isset($db)) {
 ?>
 
 <br>
-<h1>Drama View</h1>
+<h1>KDrama Review</h1>
 
 <nav class="navbar navbar-default">
 	<div class="container-fluid">
