@@ -60,7 +60,7 @@ $dramas = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 		$drama_rating = $row6["drama_rating"];
 
-		echo "<li class=\"col-sm-6\"><a href='dramaDetails.php?drama_id=$id'><img src='$img' class='img-thumbnail'><p>$title | $drama_rating</p></a></li>";
+		echo "<li><a href='dramaDetails.php?drama_id=$id'><img src='$img' class='img-thumbnail'><p>$title | $drama_rating</p></a></li>";
 
 	}
 	?>
