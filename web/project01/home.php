@@ -20,6 +20,7 @@
 
 	<div class="jumbotron">
 	<h2>Welcome to K-drama Review!</h2>
+
 	<h4>Sign In</h4><br>
 
 	<?php 
@@ -30,8 +31,16 @@
 	?>
 
 	<form action="signIn.php" method="post">
-		<h4>Username: <input type="text" name="username"><br><br>
-		Password: <input type="password" name="password"></h4><br>
+		<div class="form-group">
+		<label for="username">Username</label><br>
+		<input type="text" name="username" id="username">
+		</div>
+
+		<div class="form-group">
+		<label for="password">Password</label><br>
+		<input type="password" name="password" id="password">
+		</div>
+		
 		<button type=submit class="btn btn-light">Sign In</button>
 	</form>
 
