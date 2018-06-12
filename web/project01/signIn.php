@@ -1,7 +1,7 @@
 <?php
 
 	session_start();
-	//$_SESSION["bad_login"] = false;
+	$_SESSION["login_bad"] = false;
 
 
 	if(isset($_POST["username"]) && isset($_POST["password"])) {
@@ -34,13 +34,13 @@
 				die(); // we always include a die after redirects.
 
 			} else {
-				//$_SESSION["bad_login"] = true;
+				$_SESSION["login_bad"] = true;
 				header("Location: home.php");
 				die(); // we always include a die after redirects.
 			}
 			
 		} else {
-			//$_SESSION["bad_login"] = true;
+			$_SESSION["login_bad"] = true;
 			header("Location: home.php");
 			die(); // we always include a die after redirects.
 		}

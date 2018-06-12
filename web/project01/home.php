@@ -23,10 +23,10 @@
 	<h4>Sign In</h4><br>
 
 	<?php 
-		//session_start();
-		/*if(isset($_SESSION["bad_login"]) && $_SESSION["bad_login"] == true) {
+		session_start();
+		if(isset($_SESSION["login_bad"]) && $_SESSION["login_bad"] == true) {
 			echo "<div class=\"alert alert-danger\" role=\"alert\">Wrong username or password</div";
-		}*/
+		}
 	?>
 
 	<form action="signIn.php" method="post">
