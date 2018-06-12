@@ -59,20 +59,11 @@ $dramas = $statement2->fetchAll(PDO::FETCH_ASSOC);
 		echo "<ul>";
 		foreach ($dramas as $drama) {
 
-			/*$drama_id = $drama["drama_id"];
-
-			$query3 = "SELECT title, img FROM drama WHERE id=:id";
-			$statement3 = $db->prepare($query3);
-			$statement3->bindValue(":id", $drama_id, PDO::PARAM_INT);
-			$statement3->execute();
-
-			$row3 = $statement3->fetch();*/
-
 			$drama_id = $drama["id"];
 			$title = $drama["title"];
 			$drama_img = $drama["img"];
 
-			echo "<li><img src='$drama_img' class='img-thumbnail'><a href='dramaDetails.php?drama_id=$drama_id'><p>$title</p></a></li>";
+			echo "<li><a href='dramaDetails.php?drama_id=$drama_id'><img src='$drama_img' class='img-thumbnail'><p>$title</p></a></li>";
 		}
 		echo "</ul>";
 	?>
