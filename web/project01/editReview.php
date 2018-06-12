@@ -1,16 +1,19 @@
 <?php
-	$review_id = htmlspecialchars($_GET["review_id"]);
+require("dbConnect.php");
+$db = get_db();
+	
+$review_id = htmlspecialchars($_GET["review_id"]);
 
-	//get review info
-	$query1 = "SELECT rating, body FROM review WHERE id=:id";
-	$statement1 = $db->prepare($query1);
-	$statement1->bindValue(":id", $review_id, PDO::PARAM_INT);
-	$statement1->execute();
+//get review info
+$query1 = "SELECT rating, body FROM review WHERE id=:id";
+$statement1 = $db->prepare($query1);
+$statement1->bindValue(":id", $review_id, PDO::PARAM_INT);
+$statement1->execute();
 
-	$row1 = $statement1->fetch();
+$row1 = $statement1->fetch();
 
-	$rating = $row1["rating"];
-	$body = $row1["body"];
+$rating = $row1["rating"];
+$body = $row1["body"];
 
 ?>
 <!DOCTYPE html>
