@@ -98,7 +98,7 @@ $reviews = $statement2->fetchAll(PDO::FETCH_ASSOC);
 
 	<div class="form-group">
 	<label for="rating">Rating</label><br>
-	<input name="rating" id="rating" placeholder="Rating (1-10)"><br>
+	<input name="rating" type="number" id="rating" placeholder="Rating (1-10)"><br>
 	</div>
 
 	<div class="form-group">
@@ -107,7 +107,7 @@ $reviews = $statement2->fetchAll(PDO::FETCH_ASSOC);
 	</div>
 
 	<br><br>
-	<input type="submit" value="Add Review">
+	<button type="submit" class="btn btn-light">Add Review</button>
 	</form>
 
 	<br><br>

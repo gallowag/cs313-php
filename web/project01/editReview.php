@@ -37,12 +37,21 @@ $body = $row1["body"];
 	?>
 
 	<div class="jumbotron">
-	<h3>Edit review</h3>
+	<h3>Edit review</h3><br>
 
 	<form action="updateReview.php" method="post">
 		<input type="hidden" name="review_id" value="<?php echo $review_id; ?>">
-		<input name="rating" value="<?php echo $rating; ?>"><br>
-		<textarea name="body"><?php echo $body; ?></textarea><br>
+
+		<div class="form-group">
+		<label for="rating">Rating</label><br>
+		<input name="rating" value="<?php echo $rating; ?>" type="number" id="rating" placeholder="Rating (1-10)"><br>
+		</div>
+
+		<div class="form-group">
+		<label for="body">Content</label><br>
+		<textarea name="body" id="body" placeholder="Content"><?php echo $body; ?></textarea>
+		</div>
+		
 		<button type=submit class="btn btn-light">Save Changes</button>
 	</form>
 	</div>
