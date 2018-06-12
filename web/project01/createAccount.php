@@ -33,7 +33,7 @@ $row2 = $statement2->fetch();
 
 
 if($row1["username"] == $username || $row2["email"] == $email) {
-	header("Location: signUp.php");
+	header("Location: home2.php");
 	die(); 
 }
 
