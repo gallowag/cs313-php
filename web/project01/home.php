@@ -19,9 +19,7 @@
 	?>
 
 	<div class="jumbotron">
-	<h2>Welcome to K-drama Review!</h2>
-
-	<h4>Sign In</h4><br>
+	<h2>Sign In</h2>
 
 	<?php 
 		/*session_start();
@@ -40,7 +38,7 @@
 		<label for="password">Password</label><br>
 		<input type="password" name="password" id="password">
 		</div>
-		
+
 		<button type=submit class="btn btn-light">Sign In</button>
 	</form>
 
