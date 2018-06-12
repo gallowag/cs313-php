@@ -17,7 +17,7 @@ $username = $row1["username"];
 $email = $row1["email"];
 
 //get review info
-$query2 = "SELECT age(r.date) AS time_stamp, r.rating, r.body, d.title FROM review AS r, drama AS d WHERE r.drama_id=d.id AND r.user_id=:id ORDER BY time_stamp";
+$query2 = "SELECT r.id, age(r.date) AS time_stamp, r.rating, r.body, d.title FROM review AS r, drama AS d WHERE r.drama_id=d.id AND r.user_id=:id ORDER BY time_stamp";
 $statement2 = $db->prepare($query2);
 $statement2->bindValue(":id", $id, PDO::PARAM_INT);
 
@@ -66,16 +66,18 @@ $reviews = $statement2->fetchAll(PDO::FETCH_ASSOC);
 
 		$title = $review["title"];
 		$time_stamp = $review["time_stamp"];
+
 		if ($time_stamp == "00:00:00") {
 			echo "<li><h6>$title | today</h6>";
 		} else {
 			echo "<li><h6>$title | $time_stamp ago</h6>";
 		}
 
+		$review_id = $review["id"];
 		$rating = $review["rating"];
 		$body = $review["body"];
 
-		echo "<h3>$rating</h3><h5>$body</h5></li><br><hr>";
+		echo "<h3>$rating</h3><h5>$body</h5></li><a href=\"editReview.php?review_id=$review_id\">Edit</a><br><hr>";
 
 	}
 	?>
