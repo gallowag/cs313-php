@@ -23,15 +23,15 @@
 	<h4>Sign In</h4><br>
 
 	<?php 
-		session_start();
+		/*session_start();
 		if(isset($_SESSION["user_pass_bad"]) && $_SESSION["user_pass_bad"] == true) {
 			echo "<div class=\"alert alert-danger\" role=\"alert\">Wrong username or password</div";
-		}
+		}*/
 	?>
 
 	<form action="signIn.php" method="post">
 		<h4>Username: <input type="text" name="username"><br><br>
-		Password: <input type="text" name="password"></h4><br>
+		Password: <input type="password" name="password"></h4><br>
 		<button type=submit class="btn btn-light">Sign In</button>
 	</form>
 

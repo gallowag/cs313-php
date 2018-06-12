@@ -7,11 +7,19 @@ $db = get_db();
 $username = $_POST['username'];
 $email = $_POST['email'];
 $password = $_POST['password'];
+$password2 = $_POST['password2'];
 
 if (!isset($username) || $username == ""
 	|| !isset($password) || $password == ""
-	|| !isset($email) || $email == "")
+	|| !isset($email) || $email == ""
+	|| !isset($password2) || $password2 == "")
 {
+	header("Location: signUp.php");
+	die();
+}
+
+//confirm password
+if ($password1 != $password2) {
 	header("Location: signUp.php");
 	die();
 }

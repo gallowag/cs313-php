@@ -20,17 +20,12 @@
 
 	<div class="jumbotron">
 	<h2>Create an Account!</h2>
-	<?php 
-	session_start();
-	if(isset($_SESSION['create_error']) && $_SESSION['create_error'] != "") {
-		$error_msg = $_SESSION['create_error'];
-		echo "<h5>$error_msg</h5>";
-	}
-	?>
+
 	<form action="createAccount.php" method="post">
 		<h4>Username: <input type="text" name="username"><br><br>
 		Email: <input type="text" name="email"><br><br>
-		Password: <input type="text" name="password"></h4><br>
+		Password: <input type="password" name="password1"></h4><br>
+		Confirm Password: <input type="password" name="password2"></h4><br>
 		<button type=submit class="btn btn-light">Create Account</button>
 	</form>
 	<h5>Already have an account? <a href="home.php">Sign In!</a></h5>
