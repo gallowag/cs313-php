@@ -40,7 +40,7 @@ $dramas = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 	<div class="jumbotron">
 
-	<h2>Dramas</h2>
+	<h2>Dramas</h2><br>
 
 	<ul>
 
