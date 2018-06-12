@@ -24,7 +24,7 @@
 
 	<?php 
 		session_start();
-		if(isset($_SESSION["login_bad"]) && $_SESSION["login_bad"] == true) {
+		if(isset($_SESSION["user_pass_bad"]) && $_SESSION["user_pass_bad"] == true) {
 			echo "<div class=\"alert alert-danger\" role=\"alert\">Wrong username or password</div";
 		}
 	?>
