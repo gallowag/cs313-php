@@ -1,3 +1,8 @@
+<?php
+require("dbConnect.php");
+$db = get_db();
+?>
+
 <!DOCTYPE html>
 <head>
 	<!-- Required meta tags -->
@@ -24,8 +29,6 @@
 
 	session_start();
 	if (isset($_SESSION["id"])) {
-		require("dbConnect.php");
-		$db = get_db();
 
 		$user_id = $_SESSION["id"];
 
