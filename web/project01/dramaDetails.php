@@ -1,8 +1,8 @@
 <?php
 require("dbConnect.php");
+$db = get_db();
 
 $dramaId = htmlspecialchars($_GET["drama_id"]);
-$db = get_db();
 
 //get drama info
 $query1 = "SELECT title, img, description, date_started, date_finished FROM drama WHERE id=:id";
@@ -90,11 +90,21 @@ $reviews = $statement2->fetchAll(PDO::FETCH_ASSOC);
 	</div>
 
 	<div class="jumbotron">
-	<form action="insertReview.php" method="POST">
 	<h5>Add a Review</h5>
+
+	<form action="insertReview.php" method="POST">
+
 	<input type="hidden" name="drama_id" value="<?php echo $dramaId; ?>">
-	<input name="rating" placeholder="Rating (1-10)"><br>
-	<textarea name="body" placeholder="Content"></textarea>
+
+	<div class="form-group">
+	<label for="rating">Rating</label><br>
+	<input name="rating" id="rating" placeholder="Rating (1-10)"><br>
+	</div>
+
+	<div class="form-group">
+	<label for="body">Content</label><br>
+	<textarea name="body" id="body" placeholder="Content"></textarea>
+	</div>
 
 	<br><br>
 	<input type="submit" value="Add Review">
