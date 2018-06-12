@@ -23,22 +23,22 @@
 
 	<form action="createAccount.php" method="post">
 		<div class="form-group">
-		<label for="username">Username</label>
+		<label for="username">Username</label><br>
 		<input type="text" name="username" id="username">
 		</div>
 
 		<div class="form-group">
-		<label for="email">Email address</label>
+		<label for="email">Email address</label><br>
 		<input type="email" name="email" id="email">
 		</div>
 
 		<div class="form-group">
-		<label for="password">Password</label>
+		<label for="password">Password</label><br>
 		<input type="password" name="password" id="password">
 		</div>
 
 		<div class="form-group">
-		<label for="password2">Re-enter password</label>
+		<label for="password2">Re-enter password</label><br>
 		<input type="password" name="password2" id="password2">
 		</div>
 
