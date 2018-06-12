@@ -19,8 +19,33 @@
 	?>
 
 	<div class="jumbotron">
-	<h2>Welcome to K-drama Review!</h2>
+
+	<?php
+
+	session_start();
+	if (isset($_SESSION["id"])) {
+		require("dbConnect.php");
+		$db = get_db();
+
+		$user_id = $_SESSION["id"];
+
+		//get user name info
+		$query1 = "SELECT username FROM \"user\" WHERE id=:id";
+		$statement1 = $db->prepare($query1);
+		$statement1->bindValue(":id", $user_id, PDO::PARAM_INT);
+		$statement1->execute();
+
+		$row1 = $statement1->fetch();
+
+		$username = $row1["username"];
+
+		echo "<h2>Welcome to K-drama Review, $username!</h2>";
+	} else {
+		echo "<h2>Welcome to K-drama Review!</h2>";
+	}
 	
+	?>
+
 	</div>
 
 </div>
