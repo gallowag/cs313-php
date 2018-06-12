@@ -12,7 +12,7 @@ if (!isset($username) || $username == ""
 	|| !isset($password) || $password == ""
 	|| !isset($email) || $email == "")
 {
-	header("Location: signUp.php");
+	header("Location: home.php");
 	die();
 }
 
