@@ -24,22 +24,22 @@
 	<form action="createAccount.php" method="post">
 		<div class="form-group">
 		<label for="username">Username</label>
-		<input type="text" name="username" id="username"><br><br>
+		<input type="text" name="username" id="username">
 		</div>
 
 		<div class="form-group">
 		<label for="email">Email address</label>
-		<input type="email" name="email" id="email"><br><br>
+		<input type="email" name="email" id="email">
 		</div>
 
 		<div class="form-group">
 		<label for="password">Password</label>
-		<input type="password" name="password" id="password"><br><br>
+		<input type="password" name="password" id="password">
 		</div>
 
 		<div class="form-group">
 		<label for="password2">Re-enter password</label>
-		<input type="password" name="password2" id="password2"></h4><br>
+		<input type="password" name="password2" id="password2">
 		</div>
 
 		<button type=submit class="btn btn-light">Create Account</button>
