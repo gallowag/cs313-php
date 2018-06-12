@@ -42,7 +42,7 @@ $body = $row1["body"];
 	<form action="updateReview.php" method="post">
 		<input type="hidden" name="review_id" value="<?php echo $review_id; ?>">
 		<input name="rating" value="<?php echo $rating; ?>"><br>
-		<textarea name="body" value="<?php echo $body; ?>"></textarea>
+		<textarea name="body"><?php echo $body; ?></textarea><br>
 		<button type=submit class="btn btn-light">Save Changes</button>
 	</form>
 	</div>
