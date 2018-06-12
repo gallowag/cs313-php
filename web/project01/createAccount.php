@@ -7,15 +7,23 @@ $db = get_db();
 $username = $_POST['username'];
 $email = $_POST['email'];
 $password = $_POST['password'];
+$password2 = $_POST['password2'];
+
 
 if (!isset($username) || $username == ""
 	|| !isset($password) || $password == ""
-	|| !isset($email) || $email == "")
+	|| !isset($email) || $email == ""
+	|| !isset($password2) || $password2 =="")
 {
-	header("Location: home.php");
+	header("Location: signUp.php");
 	die();
 }
 
+//confirm
+if ($password != $password2) {
+	header("Location: signUp.php");
+	die(); 
+}
 
 session_start();
 
@@ -33,7 +41,7 @@ $row2 = $statement2->fetch();
 
 
 if($row1["username"] == $username || $row2["email"] == $email) {
-	header("Location: home2.php");
+	header("Location: signUp.php");
 	die(); 
 }
 
