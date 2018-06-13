@@ -30,13 +30,12 @@
 
 	<form action="signIn.php" method="post">
 		<div class="form-group">
-		<label for="username">Username</label><br>
-		<input type="text" name="username" id="username">
+		<input type="text" name="username" placeholder="Username">
 		</div>
 
 		<div class="form-group">
 		<label for="password">Password</label><br>
-		<input type="password" name="password" id="password">
+		<input type="password" name="password" placeholder="Password">
 		</div>
 
 		<button type=submit class="btn btn-light">Sign In</button>
