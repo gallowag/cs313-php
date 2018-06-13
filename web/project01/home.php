@@ -19,7 +19,7 @@
 	?>
 
 	<div class="jumbotron">
-	<h2>Sign In</h2><br>
+	<h2>Sign In</h2>
 
 	<?php 
 		/*session_start();
