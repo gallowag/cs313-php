@@ -6,6 +6,11 @@ $review_id = htmlspecialchars($_POST["review_id"]);
 $rating = htmlspecialchars($_POST["rating"]);
 $body = htmlspecialchars($_POST["body"]);
 
+if($rating > 10 || $rating < 1) {
+	header("Location: userDetails.php");
+	die();
+} 
+
 $query = "UPDATE review SET date = now(), rating = :rating, body = :body WHERE id = :id";
 $statement = $db->prepare($query);
 $statement->bindValue(":rating", $rating, PDO::PARAM_STR);
