@@ -33,7 +33,7 @@ $db = get_db();
 		$user_id = $_SESSION["id"];
 
 		//get user name info
-		$query1 = "SELECT INITCAP(username) FROM \"user\" WHERE id=:id";
+		$query1 = "SELECT initcap(username) FROM \"user\" WHERE id=:id";
 		$statement1 = $db->prepare($query1);
 		$statement1->bindValue(":id", $user_id, PDO::PARAM_INT);
 		$statement1->execute();
