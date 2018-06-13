@@ -43,7 +43,7 @@ if (!isset($db)) {
 			$id = $_SESSION['id'];
 
 			//get drama info
-			$query1 = "SELECT INITCAP(username) FROM \"user\" WHERE id=:id";
+			$query1 = "SELECT username FROM \"user\" WHERE id=:id";
 			$statement1 = $db->prepare($query1);
 			$statement1->bindValue(":id", $id, PDO::PARAM_INT);
 			$statement1->execute();
