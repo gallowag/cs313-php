@@ -2,7 +2,7 @@
 require("dbConnect.php");
 $db = get_db();
 	
-$review_id = htmlspecialchars($_GET["review_id"]);
+$review_id = htmlspecialchars($_POST["review_id"]);
 
 //get review info
 $query1 = "SELECT rating, body FROM review WHERE id=:id";

@@ -77,7 +77,10 @@ $reviews = $statement2->fetchAll(PDO::FETCH_ASSOC);
 		$rating = $review["rating"];
 		$body = $review["body"];
 
-		echo "<h3>$rating</h3><h5>$body</h5></li><a href=\"editReview.php?review_id=$review_id\">Edit</a><br><hr>";
+		echo "<h3>$rating</h3><h5>$body</h5></li>";
+		echo "<form action=\"editReview.php\" method=\"post\"><input type=\"hidden\" name=\"review_id\" value=\"$review_id\"><button type=\"submit\" class=\"btn btn-success\">Edit</button></a>";
+		echo "<form action=\"deleteReview.php\" method=\"post\"><input type=\"hidden\" name=\"review_id\" value=\"$review_id\"><button type=\"submit\" class=\"btn btn-danger\">Edit</button></a>";
+		echo "<br><hr>";
 
 	}
 	?>
