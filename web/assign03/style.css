@@ -2,18 +2,27 @@ body, html {
 	height: 100%;
 }
 
-.space-bg {
-	background-image: url("space.jpg");
+ul {
+	list-style: none;
+}
+
+h1 {
+	color: white;
+}
+
+.blue-bg {
+	background-image: url("wood.jpg");
 	height:100%;
 
+    background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: cover
+	background-size: cover;
 }
 
 .jumbotron {
-   background: rgba(255, 255, 255, 0.75);
-   color: black;
+   background: rgba(255, 255, 255, 0.40);
+   color: rgb(50, 50, 50);
 
 }
 
