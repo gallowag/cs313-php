@@ -20,7 +20,7 @@
 		echo "" . $quantity . "x " . $lego . "(s).";
 		echo "<form method=\"post\" action=\"remove.php\">";
 		echo "<input type=\"hidden\" name=\"lego\" value=\"$lego\">";
-		echo "<button type=\"submit\">Remove from Cart</button></form>";
+		echo "<button type=\"submit\" class=\"btn btn-danger\">Remove from Cart</button></form>";
 	}
 	?>
 

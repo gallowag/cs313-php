@@ -11,13 +11,15 @@
 	<div class="container">
 	<h3>Check Out</h3>
 	<form type="POST" action="confirmation.php">
+		<div class="form-group">
 		<h5>Please enter your shipping information:</h5>
-		Address: <input type="text" name="address"><br/>
-		City: <input type="text" name="city"><br/>
-		State: <input type="text" name="state"><br/>
-		Zip: <input type="text" name="zip"><br/>
+		<input type="text" name="address" placeholder="Street"><br/>
+		<input type="city" name="city" placeholder="City"><br/>
+		<input type="state" name="state" placeholder="State"><br/>
+		<input type="zip" name="zip" placeholder="Zip"><br/>
 		<br/>
-		<button type="submit">Check Out</button>
+		<button type="submit" class="btn btn-primary">Check Out</button>
+		</div>
 	</form>
 	</div>
 
