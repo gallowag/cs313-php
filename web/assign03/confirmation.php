@@ -25,12 +25,12 @@
 		$state = htmlspecialchars($_POST["state"]);
 		$zip = htmlspecialchars($_POST["zip"]);
 
-		echo "<h5>Shipping:</h5><br/>";
+		echo "<h5>Shipping:</h5>";
 		foreach ($_SESSION as $lego => $quantity) {
 			echo "" . $quantity . "x " . $lego . "(s)<br/>";
 		}
 
-		echo "<h5>To:</h5><br/>";
+		echo "<br><h5>To:</h5><";
 		echo "$address<br/>$city, $state $zip";
 		
 	?>

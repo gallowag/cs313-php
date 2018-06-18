@@ -94,20 +94,20 @@ $reviews = $statement2->fetchAll(PDO::FETCH_ASSOC);
 
 	<form action="insertReview.php" method="POST">
 
-	<input type="hidden" name="drama_id" value="<?php echo $dramaId; ?>">
+		<input type="hidden" name="drama_id" value="<?php echo $dramaId; ?>">
 
-	<div class="form-group">
-	<label for="rating">Rating</label><br>
-	<input name="rating" type="number" id="rating" placeholder="Rating (1-10)"><br>
-	</div>
+		<div class="form-group">
+		<label for="rating">Rating</label><br>
+		<input name="rating" type="number" id="rating" placeholder="Rating (1-10)"><br>
+		</div>
 
-	<div class="form-group">
-	<label for="body">Content</label><br>
-	<textarea name="body" id="body" placeholder="Content"></textarea>
-	</div>
+		<div class="form-group">
+		<label for="body">Content</label><br>
+		<textarea name="body" id="body" placeholder="Content"></textarea>
+		</div>
 
-	<br><br>
-	<button type="submit" class="btn btn-light">Add Review</button>
+		<br><br>
+		<button type="submit" class="btn btn-light">Add Review</button>
 	</form>
 
 	<br><br>
