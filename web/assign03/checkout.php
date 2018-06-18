@@ -6,8 +6,10 @@
 	  <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="style.css">
+
 </head>
-<body>
+<body class="space-bg">
 	<div class="container">
 	<h3>Check Out</h3>
 	<form type="POST" action="confirmation.php">
