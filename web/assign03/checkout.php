@@ -11,11 +11,15 @@
 </head>
 <body class="space-bg">
 	<div class="container">
+	<h1>Star Wars Lego</h1>
+		
+	<div class="jumbotron">
+
 	<h3>Check Out</h3>
-	<form type="POST" action="confirmation.php">
+	<form action="confirmation.php" method="POST">
 		<div class="form-group">
 		<h5>Please enter your shipping information:</h5>
-		<input type="text" name="address" placeholder="Street"><br/>
+		<input type="text" name="street" placeholder="Street"><br/>
 		<input type="city" name="city" placeholder="City"><br/>
 		<input type="state" name="state" placeholder="State"><br/>
 		<input type="zip" name="zip" placeholder="Zip"><br/>
@@ -23,6 +27,7 @@
 		<button type="submit" class="btn btn-primary">Check Out</button>
 		</div>
 	</form>
+	</div>
 	</div>
 
 </body>

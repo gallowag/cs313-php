@@ -20,10 +20,10 @@
 		session_start();
 
 		//get lego item info
-		$address = $_POST["address"];
-		$city = $_POST["city"];
-		$state = $_POST["state"];
-		$zip = $_POST["zip"];
+		$address = htmlspecialchars($_POST["street"]);
+		$city = htmlspecialchars($_POST["city"]);
+		$state = htmlspecialchars($_POST["state"]);
+		$zip = htmlspecialchars($_POST["zip"]);
 
 		echo "<h5>Shipping:</h5><br/>";
 		foreach ($_SESSION as $lego => $quantity) {
